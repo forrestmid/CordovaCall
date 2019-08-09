@@ -5,18 +5,18 @@
     <clobbers target="cordova.plugins.CordovaCall" />
   </js-module>
   <platform name="android">
-    <config-file parent="/*" target="res/xml/config.xml">
+    <config-file parent="/*" target="app/src/main/res/xml/config.xml">
       <feature name="CordovaCall">
         <param name="android-package" value="com.dmarc.cordovacall.CordovaCall" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
-    <config-file parent="/*" target="AndroidManifest.xml">
+    <config-file parent="/*" target="app/src/main/AndroidManifest.xml">
         <uses-permission android:name="android.permission.BIND_TELECOM_CONNECTION_SERVICE"/>
         <uses-permission android:name="android.permission.CALL_PHONE"/>
         <uses-permission android:name="android.permission.MANAGE_OWN_CALLS"/>
     </config-file>
-    <config-file parent="/manifest/application" target="AndroidManifest.xml">
+    <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">
         <service android:name="com.dmarc.cordovacall.MyConnectionService"
                  android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
             <intent-filter>
